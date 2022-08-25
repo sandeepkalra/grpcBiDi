@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "./bidiGRPC";
+package saas;
+
+message req {
+    int64 id=1; 
+    bool stop=2;
+}
+message res {
+    int64 id=1;
+    bool done=2;
+}
+service HeartBeat { 
+    rpc Hello(stream req) returns (stream res) ;
+}
