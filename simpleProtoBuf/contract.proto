@@ -1,0 +1,14 @@
+syntax = "proto3";
+package saas;
+option go_package =  "./contract";
+//import "google/protobuf/timestamp.proto";
+
+message req_heartbeat {
+ int32 id = 1;
+ bool done =  2;
+}
+
+message res_heartbeat {
+ int32 id = 1;
+}
+
